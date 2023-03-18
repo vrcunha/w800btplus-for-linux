@@ -22,7 +22,26 @@ taskipy = "^1.10.3"
 mkdocs = "^1.4.2"
 mkdocstrings = "^0.20.0"
 mkdocstrings-python = "^0.8.3"
+mkdocs-material = "^9.1.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--doctest-modules"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.black]
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "black --diff . && isort --diff ."
+docs = "mkdocs serve"
+pre_test = "task lint"
+test = "pytest -s -x --cov=w800btplus_for_linux -vv"
+post_test = "coverage html"
