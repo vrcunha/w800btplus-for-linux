@@ -15,21 +15,21 @@ A ideia é utilizar a ferramenta pacmd como base para obter as informações e c
 - Poetry
 
 ## Andamento do projeto
-Etapa atual - 0
+Etapa atual - 1
 
 ### Lista de dispositivos testados e estão funcionando com este aplicativo:
 
 |Dispositivo | Cobertura|
 | :---: | :---: |
-| EDIFIER W800BT Plus | **0 %** |
+| EDIFIER W800BT Plus | **40 %** |
 
 
 ## Lista de funções que o aplicativo deverá possuir
 - capturar a entrada do dispositivo
-- mostrar o nome do dispositivo
-- apresentar o percentual de bateria
 - validar o profile que está ativo
 - modo para trocar entre os perfis do dispositivo
+- mostrar o nome do dispositivo
+- apresentar o percentual de bateria
 
 ## Projeto divido em etapas
 * Etapa 0

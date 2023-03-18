@@ -1,14 +1,18 @@
 [tool.poetry]
 name = "w800btplus-for-linux"
 version = "0.1.0"
-description = ""
+description = "Um API para controle e monitoramento do Headset EDIFIER W800BT Plus para Linux mais especificamente no Ubuntu."
 authors = ["Victor Cunha <cunhavictorr@gmail.com>"]
 readme = "README.md"
 packages = [{include = "w800btplus_for_linux"}]
 
+[tool.poetry.scripts]
+app-w800btplus = "w800btplus_for_linux.cli:app"
+
 [tool.poetry.dependencies]
 python = "^3.10"
-
+typer = "^0.7.0"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.2"
@@ -16,7 +20,6 @@ pytest-cov = "^4.0.0"
 black = "^23.1.0"
 isort = "^5.12.0"
 taskipy = "^1.10.3"
-
 
 [tool.poetry.group.doc.dependencies]
 mkdocs = "^1.4.2"
